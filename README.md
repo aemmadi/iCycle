@@ -1,5 +1,8 @@
 # iCycle
 EarthXHack 2018 HackDFW
+iCycle is a novel way to encourage people to integrate recycling into their lives and live in a sustainable manner.
+
+<a href="https://devpost.com/software/icycle" target="_blank">Devpost</a>
 
 <h2>About:</h2>
 <p>iCycle is a novel way to encourage people to integrate recycling into their lives and live in a sustainable matter.</p>
