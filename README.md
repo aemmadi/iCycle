@@ -12,7 +12,6 @@
 <ul>
   <li>Using advanced machine learning algorithms, iCycle enables users to identify whether any item is recyclable with just a single snap of their smartphone camera.</li>
   <li>Using the location services feature available in smartphones, iCycle can show users the nearest recycling centers in their vicinity</li>
-  <img src="https://user-images.githubusercontent.com/33047045/39097199-d9db82e2-461e-11e8-8f00-29797474c322.png" width="480" height="800">
   <li>iCycle also uses the latest statistics taken from government agencies and credible organizations to calculate user's carbon footprint and compare it with the average American's.</li>
   <li>Each time a user recycles an item, they receive points. Users are incentivized to be more sustainable by using the points they accumulate to climb the ranks of the leaderboard.</li>
 </ul>
