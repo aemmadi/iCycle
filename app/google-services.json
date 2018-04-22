@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1000439601817",
+    "firebase_url": "https://icycle-f4de1.firebaseio.com",
+    "project_id": "icycle-f4de1",
+    "storage_bucket": "icycle-f4de1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1000439601817:android:0197105e1adb37c8",
+        "android_client_info": {
+          "package_name": "com.coppellcoders.icycle"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1000439601817-vfnd2e38j8unoqkso4ckjo52q1336los.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.coppellcoders.icycle",
+            "certificate_hash": "d4613221f3f6954cad1f24d47bd737f1cfe4ca79"
+          }
+        },
+        {
+          "client_id": "1000439601817-3gatlfc1kqffsa0bnoev9ph3gft573oe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqS2dovnnVFuElmD9VRkLdJkaX7ZXMkL0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1000439601817-3gatlfc1kqffsa0bnoev9ph3gft573oe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

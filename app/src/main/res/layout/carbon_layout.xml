@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background_res"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Carbon Foot Print Calculator"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:textSize="30dp"
+        />
+    <EditText
+        android:id="@+id/elec"
+        android:layout_width="300dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:background="@drawable/user"
+        android:hint="Yearly Electricity Costs ($)"
+        android:paddingLeft="15dp"
+        android:textColorHint="@android:color/white"
+        android:inputType="number" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"></View>
+    <EditText
+        android:layout_width="300dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:id="@+id/ng"
+        android:hint="Yearly Natural Gas Costs ($)"
+        android:textColorHint="@android:color/white"
+        android:paddingLeft="15dp"
+        android:background="@drawable/user"
+        android:inputType="number"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"></View>
+    <EditText
+        android:layout_width="300dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:id="@+id/heat"
+        android:textColorHint="@android:color/white"
+        android:paddingLeft="15dp"
+        android:hint="Yearly Heating Costs ($)"
+        android:background="@drawable/user"
+        android:inputType="number"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"></View>
+    <EditText
+        android:layout_width="300dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:id="@+id/veh"
+        android:textColorHint="@android:color/white"
+        android:hint="Yearly Gas Costs ($)"
+        android:inputType="number"
+        android:background="@drawable/user"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"></View>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:id="@+id/show"
+        android:text="Your Carbon Footprint is: 0.00 kilos of CO2"
+        android:textStyle="bold" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Average Usage vs Your Usage"
+
+        android:textAlignment="center"
+        android:id="@+id/breakdown"
+        />
+    <com.github.mikephil.charting.charts.BarChart
+        android:layout_width="match_parent"
+        android:layout_height="275dp"
+        android:id="@+id/bargraph"
+        >
+
+    </com.github.mikephil.charting.charts.BarChart>
+
+</LinearLayout>

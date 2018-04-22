@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+
+
+        <FrameLayout
+            android:layout_width="343dp"
+            android:layout_height="349dp"
+
+            android:background="@drawable/cardbox"
+            android:orientation="vertical">
+
+
+
+
+
+
+            <TextView
+                android:id="@+id/points"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="5 points"
+                android:gravity="center|top"
+                android:layout_marginBottom="145dp"
+                android:layout_marginRight="15dp"
+                android:textColor="#ffffff"
+
+                android:textSize="25dp" />
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/item_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="This is a Bridge"
+                    android:gravity="center|top"
+                  android:layout_marginTop="50dp"
+                    android:layout_marginRight="15dp"
+                    android:textColor="@color/green"
+
+                    android:textSize="33dp" />
+                <TextView
+                    android:id="@+id/recychecker"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="This is not Recyclable"
+                    android:gravity="center|top"
+                    android:layout_marginBottom="60dp"
+                    android:layout_marginRight="15dp"
+                    android:textColor="@color/green"
+
+                    android:textSize="25dp" />
+
+
+
+
+            </LinearLayout>
+
+
+                    <Button
+                        android:id="@+id/close"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+
+                        android:layout_gravity="right"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_weight="0.04"
+                        android:background="@drawable/x_close" />
+
+
+
+
+
+
+
+
+            <Button
+
+                android:id="@+id/closeOopen"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+
+                android:layout_marginBottom="15dp"
+                android:layout_gravity="center|bottom"
+
+android:layout_marginRight="5dp"
+                android:background="@drawable/close_icon" />
+
+
+
+        </FrameLayout>
+    </LinearLayout>

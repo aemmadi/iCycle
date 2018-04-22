@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background_res"
+    tools:context="com.coppellcoders.icycle.SignUpActivity">
+
+    <ImageView
+        android:id="@+id/reg_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/reg_title"
+        android:paddingBottom="75dp"
+        android:paddingTop="15dp"
+        />
+
+    <EditText
+        android:id="@+id/sname"
+        android:layout_width="300dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:background="@drawable/user"
+        android:hint="Name"
+        android:paddingLeft="15dp"
+        android:textColorHint="@android:color/white" />
+    <View
+        android:layout_width="300dp"
+        android:layout_gravity="center"
+        android:layout_height="20dp"
+        >
+    </View>
+    <EditText
+        android:layout_width="300dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:textColorHint="@android:color/white"
+        android:id="@+id/semail"
+        android:background="@drawable/user"
+        android:paddingLeft="15dp"
+        />
+    <View
+        android:layout_width="300dp"
+        android:layout_gravity="center"
+        android:layout_height="20dp"
+        >
+    </View>
+    <EditText
+        android:layout_width="300dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:textColorHint="@android:color/white"
+        android:id="@+id/spassword"
+        android:background="@drawable/user"
+        android:paddingLeft="15dp"
+        android:inputType="textPassword"
+        />
+    <View
+        android:layout_width="300dp"
+        android:layout_gravity="center"
+        android:layout_height="20dp"
+        >
+    </View>
+    <EditText
+        android:layout_width="300dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:hint="Confirm Password"
+        android:textColorHint="@android:color/white"
+        android:id="@+id/scpassword"
+        android:background="@drawable/user"
+        android:paddingLeft="15dp"
+        android:inputType="textPassword"
+        />
+    <View
+        android:layout_width="300dp"
+        android:layout_gravity="center"
+        android:layout_height="50dp"
+        >
+    </View>
+
+    <ImageButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sign Up"
+        android:background="@android:color/transparent"
+        android:src="@drawable/sign_up"
+        android:id="@+id/ssubmit"
+        />
+
+</LinearLayout>
