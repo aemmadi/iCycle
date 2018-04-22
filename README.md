@@ -1,7 +1,7 @@
 # iCycle
-EarthXHack 2018 HackDFW
-<img src="https://user-images.githubusercontent.com/33047045/39097178-907f1e06-461e-11e8-8414-68902e8ec67c.png" width="480" height="800">
-iCycle is a novel way to encourage people to integrate recycling into their lives and live in a sustainable manner.
+<p>EarthXHack 2018 HackDFW</p>
+<img src="https://user-images.githubusercontent.com/33047045/39097178-907f1e06-461e-11e8-8414-68902e8ec67c.png" width="100" height="100"><br>
+<p align="right">iCycle is a novel way to encourage people to integrate recycling into their lives and live in a sustainable manner.</p>
 
 <a href="https://devpost.com/software/icycle" target="_blank">Devpost</a>
 
