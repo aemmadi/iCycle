@@ -15,6 +15,6 @@ EarthXHack 2018 HackDFW
 <h2>How it works:</h2>
 <ol>
   <li>User signs in or registers on the app</li>
-  <li>User has the ability to scan an object to retrieve its recyclablity or the user can calculate his carbon footprint and impact on the world anc compare it to the average American.</li>
+  <li>User has the ability to scan an object to retrieve its recyclablity or the user can calculate his carbon footprint and impact on the world and compare it to the average American.</li>
     <li>User scans the object, the app processes the image and predicts various possibilities of what the object might be. If it matches any recyclable material it categorizes the object as a recyclable material.</li>
     </ol>
