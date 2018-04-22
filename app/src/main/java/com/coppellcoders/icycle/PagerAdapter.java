@@ -27,6 +27,9 @@ public class PagerAdapter extends FragmentStatePagerAdapter {
             case 2:
                 CarbonActivity tab3 = new CarbonActivity();
                 return tab3;
+            case 3:
+                SearchFragment tab4 = new SearchFragment();
+                return tab4;
             default:
                 return null;
         }

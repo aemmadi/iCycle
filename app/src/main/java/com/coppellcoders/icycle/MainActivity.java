@@ -593,7 +593,6 @@ points.setText(diffMeter+" points");
             case R.id.imageView:
                 break;
             case R.id.takePicture:
-                Toast.makeText(getActivity(), "Clicked", Toast.LENGTH_LONG).show();
                 takePictureFromCamera();
                 break;
         }

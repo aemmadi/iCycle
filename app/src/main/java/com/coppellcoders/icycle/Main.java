@@ -39,6 +39,7 @@ public class Main extends AppCompatActivity {
         tabLayout.addTab(tabLayout.newTab().setText(""));
         tabLayout.addTab(tabLayout.newTab().setText(""));
         tabLayout.addTab(tabLayout.newTab().setText(""));
+        tabLayout.addTab(tabLayout.newTab().setText(""));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         final ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
@@ -66,6 +67,7 @@ public class Main extends AppCompatActivity {
         tabLayout.getTabAt(0).setIcon(ContextCompat.getDrawable(getApplicationContext(), R.drawable.ic_home_black_24dp));
         tabLayout.getTabAt(1).setIcon(ContextCompat.getDrawable(getApplicationContext(), R.drawable.ic_stars_black_24dp));
         tabLayout.getTabAt(2).setIcon(ContextCompat.getDrawable(getApplicationContext(), R.drawable.footprint));
+        tabLayout.getTabAt(3).setIcon(ContextCompat.getDrawable(getApplicationContext(), R.drawable.recycle));
 
   //      tabLayout.getTabAt(3).setIcon(ContextCompat.getDrawable(getApplicationContext(), R.drawable.ic_location_on_black_24dp));
 
