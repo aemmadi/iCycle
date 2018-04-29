@@ -3,7 +3,12 @@
 <img src="https://user-images.githubusercontent.com/33047045/39097178-907f1e06-461e-11e8-8414-68902e8ec67c.png" width="100" height="100"><br>
 <p>iCycle is a novel way to encourage people to integrate recycling into their lives and live in a sustainable manner.</p>
 
-<a href="https://devpost.com/software/icycle" target="_blank">Devpost</a>
+<a href="https://devpost.com/software/icycle"><img src="http://entrepreneurship.columbia.edu/wp-content/uploads/2014/03/Devpost.jpg" height="100" width="250" alt="Devpost Logo"></a>
+<a href="https://play.google.com/store/apps/details?id=com.coppellcoders.icycle"><img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" height="100" width="250" alt="Play Store Link"></a>
+
+<p>If the above image links don't load/work</p>
+<p><a href="https://devpost.com/software/icycle">Devpost</a> &
+<a href="https://play.google.com/store/apps/details?id=com.coppellcoders.icycle">Play Store</a>
 
 <h2>About:</h2>
 <p>iCycle is a novel way to encourage people to integrate recycling into their lives and live in a sustainable matter.</p>
