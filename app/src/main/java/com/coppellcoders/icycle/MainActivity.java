@@ -2,7 +2,10 @@ package com.coppellcoders.icycle;
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;
+import android.content.pm.PackageManager;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
+import android.Manifest;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -70,6 +73,7 @@ import static android.app.Activity.RESULT_OK;
 public class MainActivity extends Fragment implements View.OnClickListener{
 
     private static final int CAMERA_REQUEST_CODE = 420;
+    private static final int MY_PERMISSIONS_REQUEST_LOCATION = 99;
 
     private static final String VISION_API_KEY = "AIzaSyByPX6YJOmWdn86wp4_u1FgiRDBPvV2VB8";
     final FirebaseDatabase database = FirebaseDatabase.getInstance();
@@ -79,11 +83,12 @@ public class MainActivity extends Fragment implements View.OnClickListener{
     ProgressDialog dialog;
     Dialog myDia;
     ImageView imageView;
-    ImageButton logout;
+    ImageButton logout,help;
     long pointss;
 long diffMeter;
     private Feature feature;
     private Bitmap bitmap;
+
 
     // list of all the possible APIs, just change the  api string to one of the following
     // "LANDMARK_DETECTION" - detects the landmark and prints out the name
@@ -99,6 +104,7 @@ long diffMeter;
         View root  =inflater.inflate(R.layout.activity_main, container, false);
         takePicture = root.findViewById(R.id.takePicture);
         takePicture.setOnClickListener(this);
+        help = root.findViewById(R.id.help);
         imageView = root.findViewById(R.id.imageView);
         logout = root.findViewById(R.id.logout);
         DatabaseReference ref = database.getReference("Users");
@@ -112,6 +118,31 @@ if(mAuth.getCurrentUser()!=null) {
             getActivity().finish();
         }
     });
+
+        help.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+
+             AlertDialog alert = null;
+                        final AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+                        builder.setTitle("Credit")
+                                .setMessage("Created for EarthXHack 2018 \n\nDarshan Bhatta\nRohith Karkala\nAnirudh Emmadi\nEashan Soni\n\nIf you have any questions or requests please email them to bhatta.darshan26@gmail.com");
+
+                        final AlertDialog finalAlert = alert;
+                        builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                if (finalAlert != null)
+                                    finalAlert.dismiss();
+                            }
+                        });
+                        alert = builder.create();
+
+
+                        alert.show();
+
+        }
+    });
+
     ref.child(mAuth.getCurrentUser().getUid()).addListenerForSingleValueEvent(
             new ValueEventListener() {
                 @Override
@@ -403,23 +434,60 @@ if(mAuth.getCurrentUser()!=null) {
                 goONo.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        if(finalIsRecyclable){
+                        if (finalIsRecyclable) {
+                            if (ContextCompat.checkSelfPermission(getContext(),
+                                    Manifest.permission.ACCESS_FINE_LOCATION)
+                                    != PackageManager.PERMISSION_GRANTED) {
+
+                                // Should we show an explanation?
+                                if (ActivityCompat.shouldShowRequestPermissionRationale(getActivity(),
+                                        Manifest.permission.ACCESS_FINE_LOCATION)) {
+
+                                    // Show an explanation to the user *asynchronously* -- don't block
+                                    // this thread waiting for the user's response! After the user
+                                    // sees the explanation, try again to request the permission.
+                                    new AlertDialog.Builder(getContext())
+                                            .setTitle("Need")
+                                            .setMessage("Need")
+                                            .setPositiveButton("YE", new DialogInterface.OnClickListener() {
+                                                @Override
+                                                public void onClick(DialogInterface dialogInterface, int i) {
+                                                    //Prompt the user once explanation has been shown
+                                                    ActivityCompat.requestPermissions(getActivity(),
+                                                            new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
+                                                            MY_PERMISSIONS_REQUEST_LOCATION);
+                                                }
+                                            })
+                                            .create()
+                                            .show();
 
 
-                            DatabaseReference mRef =  database.getReference().child("Users").child(mAuth.getCurrentUser().getUid());
-                            mRef.child("Points").setValue((pointss+diffMeter));
-                            highestCountName[0] = highestCountName[0].replace("Count", "");
-                            Intent myIntent = new Intent(getContext(), HomeActivity.class);
-                            myIntent.putExtra("name", highestCountName[0]);
-                            startActivity(myIntent);
+                                } else {
+                                    // No explanation needed, we can request the permission.
+                                    ActivityCompat.requestPermissions(getActivity(),
+                                            new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
+                                            MY_PERMISSIONS_REQUEST_LOCATION);
+                                  //  Toast.makeText(getContext(),"Please grant permission to continue, cannot find nearest recyable locations",Toast.LENGTH_SHORT).show();
+                                }
+                            }else {
 
+                                DatabaseReference mRef = database.getReference().child("Users").child(mAuth.getCurrentUser().getUid());
+                                mRef.child("Points").setValue((pointss + diffMeter));
+                                highestCountName[0] = highestCountName[0].replace("Count", "");
+                                Intent myIntent = new Intent(getContext(), HomeActivity.class);
+                                myIntent.putExtra("name", highestCountName[0]);
+                                startActivity(myIntent);
 
+                            }
 
-
-                        }else{
-                            Toast.makeText(getActivity(), "This is not recyclable",Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(getActivity(), "This is not recyclable", Toast.LENGTH_SHORT).show();
 
                         }
+
+
+
+
                     }
                 });
                 //Difficulty Meter
@@ -564,6 +632,31 @@ points.setText(diffMeter+" points");
 
         return message;
     }
+
+
+    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
+        switch (requestCode) {
+            case MY_PERMISSIONS_REQUEST_LOCATION: {
+                // If request is cancelled, the result arrays are empty.
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+
+                    DatabaseReference mRef = database.getReference().child("Users").child(mAuth.getCurrentUser().getUid());
+                    mRef.child("Points").setValue((pointss + diffMeter));
+
+                    Intent myIntent = new Intent(getContext(), HomeActivity.class);
+                    myIntent.putExtra("name", "N/A");
+                    startActivity(myIntent);
+                    //call your action
+
+                } else {
+                    Toast.makeText(getContext(),"Error permission denied: cannot find nearest recyable locations",Toast.LENGTH_SHORT).show();
+                }
+                break;
+            }
+        }
+    }
+
 
     //prints the message in a formatted way
     private String formatText(List<EntityAnnotation> entityAnnotation) {

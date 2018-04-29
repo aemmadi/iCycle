@@ -1,54 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:weightSum="1">
+    android:layout_width="343dp"
+    android:layout_height="349dp"
+    android:layout_gravity="center"
+    android:background="@drawable/cardbox"
+    >
+
+    <Button
+        android:id="@+id/closedef"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+
+        android:layout_gravity="right"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_weight="0.04"
+        android:background="@drawable/x_close" />
 
 
+    <TextView
+        android:id="@+id/def"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
 
-        <FrameLayout
-            android:layout_width="343dp"
-            android:layout_height="349dp"
-            android:layout_gravity="center"
-            android:background="@drawable/cardbox"
-            android:orientation="vertical">
+        android:layout_gravity="center"
 
+        android:text="dsssssdsdsdsdsdsdsdsdsdsdsdsdsd"
+        android:textColor="#ffffff"
 
-
-
-
-
-            <TextView
-                android:id="@+id/def"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Check for a recycling bin outside the theater, and deposit your 3D glasses after the show. The market leader, RealD, sets ups containers outside of movie theaters to collect used glasses. Theaters such as IMAX sterilize and reuse the glasses. To sterilize and reuse glasses at home, any kind of dishwasher and ammonia-free detergent will work. Just keep the temperature below 140 degrees."
-                android:gravity="center|top"
-                android:layout_marginRight="8dp"
-
-                android:textColor="#ffffff"
-
-                android:textSize="18dp" />
-
-
-
-
-
-
-                    <Button
-                        android:id="@+id/closedef"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-
-                        android:layout_gravity="right"
-                        android:layout_marginRight="15dp"
-                        android:layout_marginTop="15dp"
-                        android:layout_weight="0.04"
-                        android:background="@drawable/x_close" />
+        android:textSize="18dp" />
 
 
 
@@ -61,5 +43,11 @@
 
 
 
-        </FrameLayout>
-    </LinearLayout>
+
+
+
+
+
+
+
+    </FrameLayout>

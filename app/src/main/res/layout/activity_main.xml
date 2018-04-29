@@ -7,6 +7,16 @@
     android:background="@drawable/back_home"
     tools:context="com.coppellcoders.icycle.MainActivity">
 
+    <ImageButton
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_gravity="right"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="8dp"
+        android:id="@+id/help"
+        android:background="@drawable/x_help"
+
+        />
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="200dp"
