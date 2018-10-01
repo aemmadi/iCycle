@@ -10,6 +10,11 @@
 <p><a href="https://devpost.com/software/icycle">Devpost</a> &
 <a href="https://play.google.com/store/apps/details?id=com.coppellcoders.icycle">Play Store</a>
 
+Made by 
+
+[Anirudh Emmadi](https://anirudhemmadi.com) | [Darshan Bhatta](https://darshanbhatta.com) | [Rohith Karkala](https://github.com/RKarkala) |
+[Eashan Soni](https://github.com/parrot15)
+
 <h2>About:</h2>
 <p>iCycle is a novel way to encourage people to integrate recycling into their lives and live in a sustainable matter.</p>
 
